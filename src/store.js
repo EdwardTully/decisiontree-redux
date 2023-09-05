@@ -1,6 +1,6 @@
 import {configureStore} from '@reduxjs/toolkit'
 import decABReducer from './views/start/decABSlice'
-import decAReducer from './views/level1/decASlice'
+import decAReducer from './views/decA/decASlice'
 import decBReducer from './views/level4/decBSlice'
 import choiceA1ABReducer from './views/level2/choiceA1ABSlice'
 

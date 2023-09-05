@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import ChoiceAB from '../views/start/ChoiceAB'
-import ChoiceA from '../views/level1/ChoiceA'
+import ChoiceA from '../views/decA/ChoiceA'
 import ChoiceB from '../views/level4/ChoiceB'
+import ChoiceA1AB from '../views/level2/ChoiceA1AB'
+import ChoiceA2AB from '../views/level3/ChoiceA2AB'
 import {useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 
@@ -10,6 +12,7 @@ function Window() {
 
 const [optVal, setOptVal] = useState('default')
 const choicesL1 = useSelector((state)=>state.optionAB.choice)
+const choicesL2 = useSelector((state)=>state.optionA.choice)
 
 
   return (
@@ -21,8 +24,15 @@ const choicesL1 = useSelector((state)=>state.optionAB.choice)
         <ChoiceA />
       ) : optVal === "kill" ? (
         <ChoiceB />
-      ) : null}
+      ) : optVal === 'success' ? (
+        <ChoiceA1AB/>
+      ) : optVal === 'failure'? (
+        <ChoiceA2AB/>
+      ) :null
+      
+      }
       <button onClick={()=>setOptVal(choicesL1)}>Submit</button>
+      <button onClick={()=>setOptVal(choicesL2)}>Submit</button>
      
     </div>
   );

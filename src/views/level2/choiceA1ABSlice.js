@@ -9,11 +9,11 @@ const choiceA1ABSlice = createSlice({
     name: 'optionA1AB',
     initialState: initialState,
     reducers: {
-        choiceAB: (state, action)=>{
+        choiceA1AB: (state, action)=>{
             state.choice = action.payload
         },
        
 }})
 
 export default choiceA1ABSlice.reducer
-export const {choiceAB} = choiceA1ABSlice.actions
+export const {choiceA1AB} = choiceA1ABSlice.actions
