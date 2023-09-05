@@ -6,7 +6,7 @@ import {choiceB} from './decBSlice'
 function ChoiceB() {
 
 const dispatch = useDispatch()
-const choiceB12 = useSelector((state)=>state.optionB.choiceB)
+
 
 
   return (
@@ -17,8 +17,8 @@ const choiceB12 = useSelector((state)=>state.optionB.choiceB)
             <option value='optionB1'>Option B1</option>
             <option value='optionB2'>Option B2</option>
         </select>
-        {<div>Selection: {choiceB12}</div>}
-        <button onClick={()=>''}>Submit</button>
+       
+      
        
     </div>
   )

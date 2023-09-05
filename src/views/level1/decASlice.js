@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-    choiceA: 'option?'
+    choiceA: ''
 }
 
 const decASlice = createSlice({

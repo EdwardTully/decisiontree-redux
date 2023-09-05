@@ -5,8 +5,8 @@ const initialState = {
     choice: '',
 }
 
-const decABSlice = createSlice({
-    name: 'optionAB',
+const choiceA1ABSlice = createSlice({
+    name: 'optionA1AB',
     initialState: initialState,
     reducers: {
         choiceAB: (state, action)=>{
@@ -15,5 +15,5 @@ const decABSlice = createSlice({
        
 }})
 
-export default decABSlice.reducer
-export const {choiceAB} = decABSlice.actions
+export default choiceA1ABSlice.reducer
+export const {choiceAB} = choiceA1ABSlice.actions

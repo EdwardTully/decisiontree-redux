@@ -1,38 +1,29 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import ChoiceAB from '../views/start/ChoiceAB'
-import ChoiceA from '../views/decA/ChoiceA'
-import ChoiceB from '../views/decB/ChoiceB'
+import ChoiceA from '../views/level1/ChoiceA'
+import ChoiceB from '../views/level4/ChoiceB'
 import {useSelector} from 'react-redux'
+import {useNavigate} from 'react-router-dom'
 
 function Window() {
 
 
-  
-    
-// lazy import method:  const Component = React.lazy(()=>import('./Component'))
-
-// switch(expr){
-//    case 'kjdsfj':
- //       return 
-//    case 'dfdfsd':
-//        return
-//    default:
- //       return
-
-
-const choicesAll = useSelector((state)=>state.optionAB.choice)
+const [optVal, setOptVal] = useState('default')
+const choicesL1 = useSelector((state)=>state.optionAB.choice)
 
 
   return (
     <div>
      
-      {choicesAll === "default" ? (
+      {optVal === "default" ? (
         <ChoiceAB />
-      ) : choicesAll === "optionA" ? (
+      ) : optVal === "authorize" ? (
         <ChoiceA />
-      ) : choicesAll == "optionB" ? (
+      ) : optVal === "kill" ? (
         <ChoiceB />
       ) : null}
+      <button onClick={()=>setOptVal(choicesL1)}>Submit</button>
+     
     </div>
   );
 }
@@ -47,3 +38,13 @@ export default Window
 /*{useSelector((state)=>state.optionAB.choice)==='optionA'? <ChoiceA/>:
 useSelector((state)=>state.optionAB.choice)==='optionB'?
 <ChoiceB/>: null}*/
+
+// lazy import method:  const Component = React.lazy(()=>import('./Component'))
+
+// switch(expr){
+//    case 'kjdsfj':
+ //       return 
+//    case 'dfdfsd':
+//        return
+//    default:
+ //       return
